@@ -1,0 +1,233 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mermaid Chart Styles */
+.mermaid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  overflow: auto;
+}
+
+.mermaid-container svg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Enhanced Mermaid Error Styles */
+.mermaid-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding: 2rem;
+}
+
+.error-content {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.error-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.error-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #dc2626;
+  margin-bottom: 0.5rem;
+}
+
+.error-message {
+  color: #7f1d1d;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.error-details {
+  text-align: left;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.error-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.error-summary:hover {
+  color: #b91c1c;
+}
+
+.error-debug {
+  space-y: 1rem;
+}
+
+.debug-section {
+  margin-bottom: 1.5rem;
+}
+
+.debug-section h4 {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.debug-code {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  overflow-x: auto;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.debug-code.original {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.debug-code.cleaned {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.debug-code.example {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.debug-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: #6b7280;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.debug-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* Scrollbar styles */
+.mermaid-container::-webkit-scrollbar,
+.debug-code::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.mermaid-container::-webkit-scrollbar-track,
+.debug-code::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.mermaid-container::-webkit-scrollbar-thumb,
+.debug-code::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.mermaid-container::-webkit-scrollbar-thumb:hover,
+.debug-code::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .mermaid-error {
+    padding: 1rem;
+  }
+  
+  .error-content {
+    max-width: 100%;
+  }
+  
+  .debug-code {
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+  
+  .error-summary {
+    font-size: 0.8rem;
+  }
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
